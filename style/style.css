@@ -1,0 +1,43 @@
+header {
+  -webkit-box-shadow: gray 0px 3px 5px;
+          box-shadow: gray 0px 3px 5px;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 3px 0px;
+}
+
+header div {
+  width: 100%;
+  text-align: center;
+}
+
+header div img {
+  height: 40px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+section {
+  margin-top: 3px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+section input {
+  width: 100%;
+  background-color: #e0e0e0;
+  border: 0px;
+  height: 42px;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+section div {
+  padding-top: 30px;
+}
+/*# sourceMappingURL=style.css.map */

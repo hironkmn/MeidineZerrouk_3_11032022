@@ -1,0 +1,37 @@
+@import "header";
+
+$primary:#9356DC;
+$secondary:#FF79DA;
+$third: #99E2D0;
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+section{
+    margin-top: 3px;
+    text-align: center;
+    background-color: lighten($color: gray, $amount: 45%);
+        input{
+            width: 100%;
+            background-color: lighten($color: lightgray, $amount: 5%);
+            border: 0px;
+            height: 42px;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+        div{
+            padding-top: 30px;
+        }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+}
+
+@media screen and (min-width: 992px) {
+    
+}
