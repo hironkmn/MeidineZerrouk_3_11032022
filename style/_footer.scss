@@ -1,0 +1,27 @@
+footer{
+    background-color: darken($color: gray, $amount: 25%);
+    padding-bottom: 30px;
+        margin: auto;
+        h3{
+            color: white;
+            padding-top: 30px;
+            font-family: 'Shrikhand', cursive;
+            font-weight: 100;
+            margin-left: 20px;
+        }
+        .menu-footer{
+            margin-top: 15px;
+            list-style-type: none;
+            color: white;
+            margin-left: 20px;
+            li{
+                margin: 5px;
+                .important{
+                    margin-left: 10px;
+                }
+                .important-2{
+                    margin-left: 5px;
+                }
+            }
+        }
+}

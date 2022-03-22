@@ -15,47 +15,111 @@ header div img {
   height: 40px;
 }
 
+footer {
+  background-color: #404040;
+  padding-bottom: 30px;
+  margin: auto;
+}
+
+footer h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 100;
+  margin-left: 20px;
+}
+
+footer .menu-footer {
+  margin-top: 15px;
+  list-style-type: none;
+  color: white;
+  margin-left: 20px;
+}
+
+footer .menu-footer li {
+  margin: 5px;
+}
+
+footer .menu-footer li .important {
+  margin-left: 10px;
+}
+
+footer .menu-footer li .important-2 {
+  margin-left: 5px;
+}
+
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   padding: 0px;
   margin: 0px;
+  text-decoration: none;
 }
 
-section {
+.informations {
   margin-top: 3px;
   text-align: center;
   background-color: #f3f3f3;
 }
 
-section .recherche {
+.informations .recherche {
   width: 100%;
   padding: 0;
   background-color: #e0e0e0;
 }
 
-section .recherche i {
+.informations .recherche i {
   color: gray;
 }
 
-section .recherche input {
-  left: 60%;
-  width: 20%;
+.informations .recherche input {
+  width: 50%;
   background-color: #e0e0e0;
   border: none;
   height: 42px;
   font-size: 16px;
   color: black;
+  text-align: center;
 }
 
-section div {
+.informations div {
   padding-top: 30px;
 }
 
-section div p {
+.informations div p {
   margin-top: 10px;
 }
 
-section div button {
+.informations div button {
   font-size: 18px;
   margin: 30px 0px 50px 0px;
   border-radius: 25px;
@@ -66,13 +130,13 @@ section div button {
   color: white;
   -webkit-box-shadow: gray 0px 2px 5px;
           box-shadow: gray 0px 2px 5px;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
-section div button:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#9356DC));
-  background-image: linear-gradient(#fface8, #9356DC);
+.informations div button:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background-image: linear-gradient(#fface8, #ae80e5);
   -webkit-box-shadow: black 0px 3px 5px;
           box-shadow: black 0px 3px 5px;
   cursor: pointer;
@@ -84,7 +148,6 @@ nav h1 {
 }
 
 nav ul {
-  margin-left: 20px;
   list-style: none;
 }
 
@@ -104,13 +167,14 @@ nav ul li {
 nav ul li span {
   position: absolute;
   left: 0%;
-  top: 50%;
+  top: 49%;
   margin: -10px;
   background-color: #9356DC;
-  border-radius: 50%;
-  width: 20px;
+  border-radius: 67%;
   text-align: center;
   color: white;
+  height: 20px;
+  width: 20px;
 }
 
 nav ul li .fa-mobile {
@@ -127,5 +191,118 @@ nav ul .third-son {
 
 nav ul .third-son .fa-store {
   color: #9356DC;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  background-color: #f3f3f3;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.restaurants h1 {
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.restaurants a {
+  width: 95%;
+  border-radius: 15px;
+  margin: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 20px #999;
+          box-shadow: 0px 5px 20px #999;
+  height: 230px;
+  color: black;
+}
+
+.restaurants a .card-image {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0;
+  height: 160px;
+  position: relative;
+}
+
+.restaurants a .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants a .card-image .nouveau {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: green;
+  padding: 5px 10px;
+  background-color: lightgreen;
+  border-radius: 3px;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 3px 5px black;
+          box-shadow: 2px 3px 5px black;
+}
+
+.restaurants a .restaurant-name {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.restaurants a .city {
+  margin-left: 10px;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hearts i {
+  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to left, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hearts .fa-heart {
+  display: none;
+}
+
+.hearts .fa-heart-o {
+  font-size: 24px;
+  margin-right: 20px;
+  margin-top: 20px;
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+.hearts:hover .fa-heart {
+  display: block;
+  color: linear-gradient(#9356DC, #FF79DA);
+  font-size: 24px;
+  margin-right: 20px;
+  margin-top: 20px;
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+.hearts:hover .fa-heart-o {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
