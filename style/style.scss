@@ -1,10 +1,7 @@
 @import "header";
 @import "footer";
 @import "animations";
-
-$primary:#9356DC;
-$secondary:#FF79DA;
-$third: #99E2D0;
+@import "variables";
 
 html,body
 {
@@ -171,7 +168,8 @@ nav{
 }
 
 .hearts{
-    i{
+    font-size: 24px;
+    &:hover i{
         background: linear-gradient(to left, $primary 0%,$secondary 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -183,7 +181,6 @@ nav{
     }
 
     .fa-heart-o{
-        font-size: 24px;
         margin-right: 20px;
         margin-top: 20px;
         animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
@@ -191,8 +188,6 @@ nav{
 
     &:hover .fa-heart {
         display: block;
-        color: linear-gradient($primary,$secondary);
-        font-size: 24px;
         margin-right: 20px;
         margin-top: 20px;
         animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;

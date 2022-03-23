@@ -1,0 +1,235 @@
+header {
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 3px 0px;
+  -webkit-box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 1.5px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+header .arrow {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  color: black;
+}
+
+header div {
+  width: 100%;
+  text-align: center;
+}
+
+header div img {
+  height: 40px;
+}
+
+footer {
+  background-color: #404040;
+  padding-bottom: 30px;
+  margin: auto;
+}
+
+footer h3 {
+  color: white;
+  padding-top: 30px;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 100;
+  margin-left: 20px;
+}
+
+footer .menu-footer {
+  margin-top: 15px;
+  list-style-type: none;
+  color: white;
+  margin-left: 20px;
+}
+
+footer .menu-footer li {
+  margin: 5px;
+}
+
+footer .menu-footer li .important {
+  margin-left: 10px;
+}
+
+footer .menu-footer li .important-2 {
+  margin-left: 5px;
+}
+
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.plat {
+  position: relative;
+}
+
+.plat img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 45%;
+     object-position: 50% 45%;
+}
+
+.plat .menu {
+  width: 100%;
+  position: absolute;
+  background-color: #ededed;
+  padding-top: 30px;
+  top: 80%;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+}
+
+.plat .menu .menu-plats {
+  margin: auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.plat .menu .menu-plats h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.hearts {
+  font-size: 24px;
+}
+
+.hearts:hover i {
+  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to left, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hearts .fa-heart {
+  display: none;
+}
+
+.hearts .fa-heart-o {
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+.hearts:hover .fa-heart {
+  display: block;
+  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+.hearts:hover .fa-heart-o {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-menu {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.section-menu .titre-menu {
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+}
+
+.section-menu .titre-menu:before {
+  content: "";
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  position: absolute;
+  bottom: -5px;
+}
+
+.nourriture {
+  margin: 15px auto auto auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.nourriture .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nourriture .check {
+  display: none;
+}
+
+.commande {
+  margin: 50px;
+  text-align: center;
+}
+
+.commande button {
+  font-size: 18px;
+  border-radius: 25px;
+  border: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  padding: 15px 50px;
+  color: white;
+  -webkit-box-shadow: gray 0px 2px 5px;
+          box-shadow: gray 0px 2px 5px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.commande button:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
+  background-image: linear-gradient(#fface8, #ae80e5);
+  -webkit-box-shadow: black 0px 3px 5px;
+          box-shadow: black 0px 3px 5px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=secondaires.css.map */

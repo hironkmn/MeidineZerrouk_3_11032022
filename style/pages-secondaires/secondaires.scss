@@ -1,0 +1,131 @@
+@import 'header';
+@import '../footer';
+@import '../animations';
+@import '../variables';
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.plat{
+    position: relative;
+    img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: 50% 45%;
+    }
+    .menu{
+        width: 100%;
+        position: absolute;
+        background-color: lighten(lightgray,10%);
+        padding-top: 30px;
+        top: 80% ;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        .menu-plats{
+            margin: auto;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            h1{
+                font-family: 'Shrikhand', cursive;
+            }
+        }
+    }
+}
+
+.hearts{
+    font-size: 24px;
+    &:hover i{
+        background: linear-gradient(to left, $primary 0%,$secondary 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+       -webkit-text-fill-color:transparent;;
+    }
+    .fa-heart{
+        display: none;
+    }
+
+    .fa-heart-o{
+        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    }
+
+    &:hover .fa-heart {
+        display: block;
+        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    } 
+
+    &:hover .fa-heart-o{
+        display: none;
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+
+.section-menu{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    .titre-menu{
+        text-transform: uppercase;
+        z-index: 1;
+        position: relative;
+        &:before{
+            content: "";
+            width: 40px;
+            border-bottom: 3px solid $tertiary;
+            position: absolute;
+            bottom: -5px;
+        }
+    }
+}
+
+.nourriture{
+    margin: 15px auto auto auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    .description{
+        display: flex;
+        justify-content: space-between;
+    }
+    .check{
+        display: none;
+    }
+}
+
+.commande{
+    margin: 50px;
+    text-align: center;
+    button{
+        font-size: 18px;
+        border-radius:25px;
+        border:0px;
+        background-image: linear-gradient($secondary, $primary);
+        padding: 15px 50px;
+        color: white;
+        box-shadow: gray 0px 2px 5px;
+        transition: all 1s ease-out;
+            &:hover{
+            background-image: linear-gradient(lighten($secondary,10%), lighten($primary,10%));
+            box-shadow: black 0px 3px 5px;
+            cursor: pointer;
+        }
+    }
+}
