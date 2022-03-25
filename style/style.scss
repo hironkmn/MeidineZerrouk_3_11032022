@@ -2,6 +2,7 @@
 @import "footer";
 @import "animations";
 @import "variables";
+@import "loader";
 
 html,body
 {
@@ -135,11 +136,16 @@ nav{
             padding: 0;
             height: 160px;
             position: relative;
+            transition: opacity 1s ease-in-out;
+            &:hover{
+                opacity: 0.5;
+            }
             img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
+
             .nouveau{
                 position: absolute;
                 top:10px;
@@ -169,34 +175,36 @@ nav{
 
 .hearts{
     font-size: 24px;
-    &:hover i{
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    .fa-heart{
+        transform: scale(0);
+        transition-duration: 1s;
         background: linear-gradient(to left, $primary 0%,$secondary 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-       -webkit-text-fill-color:transparent;;
-    }
-    .fa-heart{
-        display: none;
+       -webkit-text-fill-color:transparent;
+       position: absolute;
+       z-index: 1;
     }
 
     .fa-heart-o{
-        margin-right: 20px;
-        margin-top: 20px;
-        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+        transition-duration: 1s;
+        transform: scale(1);
+        right: 0;
     }
 
     &:hover .fa-heart {
-        display: block;
-        margin-right: 20px;
-        margin-top: 20px;
-        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+        transform: scale(1);
     } 
 
     &:hover .fa-heart-o{
-        display: none;
+        transform: scale(0);
     }
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     

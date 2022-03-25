@@ -1,5 +1,5 @@
 @import 'header';
-@import '../footer';
+@import 'footer';
 @import '../animations';
 @import '../variables';
 
@@ -27,50 +27,55 @@ html,body
         object-fit: cover;
         object-position: 50% 45%;
     }
-    .menu{
-        width: 100%;
-        position: absolute;
-        background-color: lighten(lightgray,10%);
-        padding-top: 30px;
-        top: 80% ;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-        .menu-plats{
-            margin: auto;
-            width: 95%;
-            display: flex;
-            justify-content: space-between;
-            h1{
-                font-family: 'Shrikhand', cursive;
+}
+
+.menu{
+    width: 100%;
+    position: absolute;
+    background-color: lighten(lightgray,10%);
+    padding-top: 30px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-top: -50px;
+    .menu-plats{
+        margin: auto;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-family: 'Shrikhand', cursive;
             }
         }
     }
-}
+
 
 .hearts{
     font-size: 24px;
-    &:hover i{
+    position: relative;
+    .fa-heart{
+        transform: scale(0);
+        transition-duration: 1s;
         background: linear-gradient(to left, $primary 0%,$secondary 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-       -webkit-text-fill-color:transparent;;
-    }
-    .fa-heart{
-        display: none;
+       -webkit-text-fill-color:transparent;
+       position: absolute;
+       z-index: 1;
     }
 
     .fa-heart-o{
-        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+        transition-duration: 1s;
+        transform: scale(1);
+        right: 0;
     }
 
     &:hover .fa-heart {
-        display: block;
-        animation: scale-up-hor-center 1s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+        transform: scale(1);
     } 
 
     &:hover .fa-heart-o{
-        display: none;
+        transform: scale(0);
     }
 }
 

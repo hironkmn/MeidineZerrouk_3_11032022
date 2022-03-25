@@ -70,6 +70,89 @@ footer .menu-footer li .important-2 {
   }
 }
 
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: white;
+  overflow: hidden;
+  -webkit-animation: disapear 250ms ease;
+          animation: disapear 250ms ease;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loader {
+  width: 120px;
+  height: 120px;
+  border: 6px solid var(--color-primary);
+  border-radius: 50%;
+  border-top-color: var(--color-secondary);
+  border-bottom-color: var(--color-primary);
+  border-left-color: var(--color-tertiary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  -webkit-animation: spin 1s linear 4;
+          animation: spin 1s linear 4;
+  color: #FF79DA;
+}
+
+.loader::before {
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-top: 2px solid #9356DC;
+  border-right: 2px solid transparent;
+  -webkit-animation: spinner .6s linear infinite;
+          animation: spinner .6s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -232,6 +315,12 @@ nav ul .third-son .fa-store {
   padding: 0;
   height: 160px;
   position: relative;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.restaurants a .card-image:hover {
+  opacity: 0.5;
 }
 
 .restaurants a .card-image img {
@@ -274,36 +363,40 @@ nav ul .third-son .fa-store {
 
 .hearts {
   font-size: 24px;
+  position: relative;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 
-.hearts:hover i {
+.hearts .fa-heart {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to left, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hearts .fa-heart {
-  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .hearts .fa-heart-o {
-  margin-right: 20px;
-  margin-top: 20px;
-  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  right: 0;
 }
 
 .hearts:hover .fa-heart {
-  display: block;
-  margin-right: 20px;
-  margin-top: 20px;
-  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .hearts:hover .fa-heart-o {
-  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 /*# sourceMappingURL=style.css.map */

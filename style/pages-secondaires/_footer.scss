@@ -2,7 +2,8 @@ footer{
     width: 100%;
     background-color: darken($color: gray, $amount: 25%);
     padding-bottom: 30px;
-    margin: auto;
+    margin-top: 1104px;
+    position: absolute;
         h3{
             color: white;
             padding-top: 30px;
@@ -25,4 +26,8 @@ footer{
                 }
             }
         }
+}
+
+a{
+    color: white;
 }

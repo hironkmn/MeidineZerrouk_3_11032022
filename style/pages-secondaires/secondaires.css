@@ -24,9 +24,11 @@ header div img {
 }
 
 footer {
+  width: 100%;
   background-color: #404040;
   padding-bottom: 30px;
-  margin: auto;
+  margin-top: 1104px;
+  position: absolute;
 }
 
 footer h3 {
@@ -54,6 +56,10 @@ footer .menu-footer li .important {
 
 footer .menu-footer li .important-2 {
   margin-left: 5px;
+}
+
+a {
+  color: white;
 }
 
 @-webkit-keyframes scale-up-hor-center {
@@ -106,17 +112,17 @@ html, body {
      object-position: 50% 45%;
 }
 
-.plat .menu {
+.menu {
   width: 100%;
   position: absolute;
   background-color: #ededed;
   padding-top: 30px;
-  top: 80%;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
+  margin-top: -50px;
 }
 
-.plat .menu .menu-plats {
+.menu .menu-plats {
   margin: auto;
   width: 95%;
   display: -webkit-box;
@@ -127,39 +133,45 @@ html, body {
           justify-content: space-between;
 }
 
-.plat .menu .menu-plats h1 {
+.menu .menu-plats h1 {
   font-family: 'Shrikhand', cursive;
 }
 
 .hearts {
   font-size: 24px;
+  position: relative;
 }
 
-.hearts:hover i {
+.hearts .fa-heart {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to left, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hearts .fa-heart {
-  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .hearts .fa-heart-o {
-  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  right: 0;
 }
 
 .hearts:hover .fa-heart {
-  display: block;
-  -webkit-animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
-          animation: scale-up-hor-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .hearts:hover .fa-heart-o {
-  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 ul {
