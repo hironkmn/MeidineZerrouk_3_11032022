@@ -64,13 +64,41 @@ a {
 
 @-webkit-keyframes check-meal {
   to {
-    width: 30px;
+    width: 10%;
+    height: 100%;
   }
 }
 
 @keyframes check-meal {
   to {
-    width: 30px;
+    width: 10%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
   }
 }
 
@@ -188,23 +216,54 @@ ul {
   bottom: -5px;
 }
 
+.m-1 {
+  animation: slide-bottom 250ms reverse forwards;
+}
+
+.m-2 {
+  animation: slide-bottom 500ms reverse forwards;
+}
+
+.m-3 {
+  animation: slide-bottom 750ms reverse forwards;
+}
+
+.m-4 {
+  animation: slide-bottom 1000ms reverse forwards;
+}
+
+.m-5 {
+  animation: slide-bottom 1250ms reverse forwards;
+}
+
+.m-6 {
+  animation: slide-bottom 1500ms reverse forwards;
+}
+
+.m-7 {
+  animation: slide-bottom 1750ms reverse forwards;
+}
+
+.m-8 {
+  animation: slide-bottom 2000ms reverse forwards;
+}
+
+.m-9 {
+  animation: slide-bottom 2250ms reverse forwards;
+}
+
+.m-10 {
+  animation: slide-bottom 2500ms reverse forwards;
+}
+
 .nourriture {
   margin: 15px auto auto auto;
-  padding: 10px;
+  padding: 10px 0 10px 10px;
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 8px lightgray;
           box-shadow: 5px 5px 8px lightgray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
 }
 
 .nourriture:hover .check {
@@ -219,17 +278,6 @@ ul {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.nourriture .price-check {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .nourriture .check {

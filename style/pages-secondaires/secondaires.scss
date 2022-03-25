@@ -101,15 +101,19 @@ ul{
     }
 }
 
+@for $i from 1 to 11 {
+    .m-#{$i}{
+        animation: slide-bottom (250ms*$i) reverse forwards ;
+    }
+}
+
 .nourriture{
     margin: 15px auto auto auto;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 8px lightgray;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: block;
     &:hover .check{
         animation: check-meal 1s ease;
         animation-fill-mode: forwards;
@@ -118,18 +122,12 @@ ul{
     .description{
         flex: 1;
     }
-    .price-check{
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-    }
     .check{
         width: 0;
         margin: auto;
         overflow: hidden;
         background-color: $tertiary;
         height: 100%;
-
         .fa-check-circle{
             color: white;
             vertical-align: middle;

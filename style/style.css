@@ -50,13 +50,41 @@ footer .menu-footer li .important-2 {
 
 @-webkit-keyframes check-meal {
   to {
-    width: 30px;
+    width: 10%;
+    height: 100%;
   }
 }
 
 @keyframes check-meal {
   to {
-    width: 30px;
+    width: 10%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
   }
 }
 
