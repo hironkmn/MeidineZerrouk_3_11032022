@@ -48,25 +48,15 @@ footer .menu-footer li .important-2 {
   margin-left: 5px;
 }
 
-@-webkit-keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+@-webkit-keyframes check-meal {
+  to {
+    width: 30px;
   }
 }
 
-@keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+@keyframes check-meal {
+  to {
+    width: 30px;
   }
 }
 
