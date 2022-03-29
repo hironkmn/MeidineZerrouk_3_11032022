@@ -316,6 +316,7 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
+  cursor: pointer;
 }
 
 .nourriture:hover .check {
