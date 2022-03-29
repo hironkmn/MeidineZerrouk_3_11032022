@@ -343,7 +343,12 @@ nav ul .third-son .fa-store {
   color: #9356DC;
 }
 
-.restaurants {
+section {
+  background-color: #f3f3f3;
+  width: 100%;
+}
+
+section .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,18 +357,17 @@ nav ul .third-son .fa-store {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  background-color: #f3f3f3;
   margin-top: 50px;
   padding-bottom: 50px;
 }
 
-.restaurants h1 {
+section .restaurants h1 {
   width: 100%;
   margin-left: 20px;
   margin-top: 40px;
 }
 
-.restaurants a {
+section .restaurants a {
   width: 95%;
   border-radius: 15px;
   margin: auto;
@@ -374,7 +378,7 @@ nav ul .third-son .fa-store {
   color: black;
 }
 
-.restaurants a .card-image {
+section .restaurants a .card-image {
   width: 100%;
   overflow: hidden;
   border-top-left-radius: 15px;
@@ -386,18 +390,18 @@ nav ul .third-son .fa-store {
   transition: opacity 1s ease-in-out;
 }
 
-.restaurants a .card-image:hover {
+section .restaurants a .card-image:hover {
   opacity: 0.5;
 }
 
-.restaurants a .card-image img {
+section .restaurants a .card-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.restaurants a .card-image .nouveau {
+section .restaurants a .card-image .nouveau {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -410,12 +414,12 @@ nav ul .third-son .fa-store {
           box-shadow: 2px 3px 5px black;
 }
 
-.restaurants a .restaurant-name {
+section .restaurants a .restaurant-name {
   margin-left: 10px;
   margin-top: 15px;
 }
 
-.restaurants a .city {
+section .restaurants a .city {
   margin-left: 10px;
 }
 
@@ -465,5 +469,32 @@ nav ul .third-son .fa-store {
 .hearts:hover .fa-heart-o {
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    width: 100%;
+    background-color: #f3f3f3;
+  }
+  section .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section .restaurants h1 {
+    max-height: 40px;
+  }
+  section .restaurants .card-click {
+    width: 350px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -174,3 +174,22 @@ html,body
         }
     }
 }
+
+@media screen and (min-width: 992px) {
+    .menu{
+        min-height: 676px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .section-menu{
+        width: 30%;
+    }
+
+
+    .commande{
+        width: 100%;
+        margin: 15px;
+    }
+}
