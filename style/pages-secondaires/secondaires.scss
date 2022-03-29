@@ -122,29 +122,16 @@ html,body
         .fa-check-circle{
             animation: rotate-90-ccw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
         }
-        .description{
-            h3{
-                overflow: hidden;
-                white-space: nowrap;
-                display: inline-block;
-                text-overflow: ellipsis;
-                width: 250px; 
-            }
-            p{
-                overflow: hidden;
-                white-space: nowrap;
-                display: inline-block;
-                text-overflow: ellipsis;
-                width: 250px;
-            }
-        }
     }
     .description{
-        flex: 1;
+        flex-grow: 1;
         margin: 10px 0px 0px 10px;
-        p{
-            line-height: 50px;
-        }
+        width: 160px;
+        p, h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+  }
     }
     b{
         align-self: flex-end;
