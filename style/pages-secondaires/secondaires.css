@@ -27,8 +27,6 @@ footer {
   width: 100%;
   background-color: #404040;
   padding-bottom: 30px;
-  margin-top: 1264px;
-  position: absolute;
 }
 
 footer h3 {
@@ -60,12 +58,6 @@ footer .menu-footer li .important-2 {
 
 a {
   color: white;
-}
-
-@media screen and (min-width: 992px) {
-  footer {
-    margin-top: 657px;
-  }
 }
 
 @-webkit-keyframes check-meal {
@@ -167,11 +159,12 @@ html, body {
   text-decoration: none;
 }
 
-.plat {
+.plat-image {
   position: relative;
+  z-index: 0;
 }
 
-.plat img {
+.plat-image .plat img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
@@ -182,12 +175,14 @@ html, body {
 
 .menu {
   width: 100%;
-  position: absolute;
   background-color: #ededed;
   padding-top: 30px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   margin-top: -50px;
+  padding-bottom: 50px;
+  z-index: 1000;
+  position: relative;
 }
 
 .menu .menu-plats {
@@ -376,6 +371,7 @@ html, body {
 .commande {
   margin: 50px;
   text-align: center;
+  background-color: #ededed;
 }
 
 .commande button {
