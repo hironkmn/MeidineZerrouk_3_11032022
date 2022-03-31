@@ -11,8 +11,8 @@ header div {
   text-align: center;
 }
 
-header div img {
-  height: 40px;
+header div h1 {
+  font-family: 'Shrikhand', cursive;
 }
 
 footer {
@@ -407,7 +407,7 @@ section .restaurants a .card-image .nouveau {
   right: 10px;
   color: green;
   padding: 5px 10px;
-  background-color: lightgreen;
+  background-color: #99E2D0;
   border-radius: 3px;
   font-weight: bold;
   -webkit-box-shadow: 2px 3px 5px black;
@@ -495,6 +495,18 @@ section .restaurants a .city {
   }
   section .restaurants .card-click {
     width: 350px;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav ul li {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
