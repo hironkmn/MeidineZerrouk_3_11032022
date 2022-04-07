@@ -71,24 +71,6 @@ a {
   }
 }
 
-@-webkit-keyframes check-meal-reverse {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 0px;
-  }
-}
-
-@keyframes check-meal-reverse {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 0px;
-  }
-}
-
 @-webkit-keyframes slide-bottom {
   0% {
     -webkit-transform: translateY(0);

@@ -47,7 +47,7 @@ html,body
         width: 95%;
         display: flex;
         justify-content: space-between;
-        h1{
+        h2{
             font-family: 'Shrikhand', cursive;
             }
         }
@@ -104,7 +104,7 @@ html,body
 
 @for $i from 1 to 12 {
     .m-#{$i}{
-        animation: slide-bottom (250ms*$i) reverse forwards ;
+        animation: slide-bottom (250ms*$i) reverse ;
     }
 }
 
@@ -115,11 +115,11 @@ html,body
     box-shadow: 5px 5px 8px lightgray;
     display: flex;
     height: 80px;
+    overflow: hidden;
     cursor: pointer;
     &:hover{
         .check{
-            animation: check-meal 1s ease;
-            animation-fill-mode: forwards;
+            width: 70px;
             text-align: center;
             height: 100%;
             border-top-right-radius: 15px;
@@ -144,11 +144,11 @@ html,body
         margin: 0px 10px 10px 0px;
     }
     .check{
-        animation: check-meal-reverse 1s ease;
+        animation: check-meal-reverse 1s ease-in-out;
         background-color: $tertiary;
         height: 100%;
-        width: 0;
-        overflow: hidden;
+        width: 0px;
+        transition-duration: 1s;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         text-align: center;

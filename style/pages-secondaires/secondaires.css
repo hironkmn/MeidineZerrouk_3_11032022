@@ -78,24 +78,6 @@ a {
   }
 }
 
-@-webkit-keyframes check-meal-reverse {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 0px;
-  }
-}
-
-@keyframes check-meal-reverse {
-  from {
-    width: 70px;
-  }
-  to {
-    width: 0px;
-  }
-}
-
 @-webkit-keyframes slide-bottom {
   0% {
     -webkit-transform: translateY(0);
@@ -196,7 +178,7 @@ html, body {
           justify-content: space-between;
 }
 
-.menu .menu-plats h1 {
+.menu .menu-plats h2 {
   font-family: 'Shrikhand', cursive;
 }
 
@@ -258,47 +240,47 @@ html, body {
 }
 
 .m-1 {
-  animation: slide-bottom 250ms reverse forwards;
+  animation: slide-bottom 250ms reverse;
 }
 
 .m-2 {
-  animation: slide-bottom 500ms reverse forwards;
+  animation: slide-bottom 500ms reverse;
 }
 
 .m-3 {
-  animation: slide-bottom 750ms reverse forwards;
+  animation: slide-bottom 750ms reverse;
 }
 
 .m-4 {
-  animation: slide-bottom 1000ms reverse forwards;
+  animation: slide-bottom 1000ms reverse;
 }
 
 .m-5 {
-  animation: slide-bottom 1250ms reverse forwards;
+  animation: slide-bottom 1250ms reverse;
 }
 
 .m-6 {
-  animation: slide-bottom 1500ms reverse forwards;
+  animation: slide-bottom 1500ms reverse;
 }
 
 .m-7 {
-  animation: slide-bottom 1750ms reverse forwards;
+  animation: slide-bottom 1750ms reverse;
 }
 
 .m-8 {
-  animation: slide-bottom 2000ms reverse forwards;
+  animation: slide-bottom 2000ms reverse;
 }
 
 .m-9 {
-  animation: slide-bottom 2250ms reverse forwards;
+  animation: slide-bottom 2250ms reverse;
 }
 
 .m-10 {
-  animation: slide-bottom 2500ms reverse forwards;
+  animation: slide-bottom 2500ms reverse;
 }
 
 .m-11 {
-  animation: slide-bottom 2750ms reverse forwards;
+  animation: slide-bottom 2750ms reverse;
 }
 
 .nourriture {
@@ -311,14 +293,12 @@ html, body {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
+  overflow: hidden;
   cursor: pointer;
 }
 
 .nourriture:hover .check {
-  -webkit-animation: check-meal 1s ease;
-          animation: check-meal 1s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 70px;
   text-align: center;
   height: 100%;
   border-top-right-radius: 15px;
@@ -350,12 +330,13 @@ html, body {
 }
 
 .nourriture .check {
-  -webkit-animation: check-meal-reverse 1s ease;
-          animation: check-meal-reverse 1s ease;
+  -webkit-animation: check-meal-reverse 1s ease-in-out;
+          animation: check-meal-reverse 1s ease-in-out;
   background-color: #99E2D0;
   height: 100%;
-  width: 0;
-  overflow: hidden;
+  width: 0px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   text-align: center;
