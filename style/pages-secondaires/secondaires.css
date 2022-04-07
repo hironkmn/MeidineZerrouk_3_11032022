@@ -12,6 +12,22 @@ header .arrow {
   left: 10px;
   top: 16px;
   color: black;
+  -webkit-transition: background;
+  transition: background;
+}
+
+header .arrow:hover {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#9356DC), color-stop(#FF79DA), to(#99E2D0));
+  background-image: linear-gradient(to right, #9356DC, #FF79DA, #99E2D0);
+  -webkit-animation: slidebg 5s linear infinite;
+          animation: slidebg 5s linear infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation: rotate-center 0.3s linear infinite both 3s;
+          animation: rotate-center 0.3s linear infinite both 3s;
 }
 
 header div {
@@ -123,6 +139,40 @@ a {
   100% {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
+  }
+}
+
+@-webkit-keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 

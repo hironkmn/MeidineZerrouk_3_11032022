@@ -1,3 +1,5 @@
+@import '../variables';
+
 header{
     width: 100%;
     margin: 0px 0px 0px 0px;
@@ -9,6 +11,18 @@ header{
         left: 10px;
         top: 16px;
         color: black;
+        transition: background;
+        &:hover{
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+            background-image:     linear-gradient(
+                to right, $primary, $secondary, $tertiary);
+              animation:slidebg 5s linear infinite;
+              transition-delay: 3s;
+              animation: rotate-center 0.3s linear infinite both 3s;
+        }
     }
     div{
         width: 100%;
