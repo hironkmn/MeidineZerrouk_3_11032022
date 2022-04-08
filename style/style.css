@@ -376,7 +376,7 @@ section .restaurants {
   padding-bottom: 50px;
 }
 
-section .restaurants h1 {
+section .restaurants h2 {
   width: 100%;
   margin-left: 20px;
   margin-top: 40px;
@@ -505,7 +505,7 @@ section .restaurants a .city {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  section .restaurants h1 {
+  section .restaurants h2 {
     max-height: 40px;
   }
   section .restaurants .card-click {
