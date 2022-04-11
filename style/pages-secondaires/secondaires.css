@@ -327,8 +327,8 @@ html, body {
 }
 
 .nourriture:hover .fa-check-circle {
-  -webkit-animation: rotate-center 1s ease-in-out both;
-          animation: rotate-center 1s ease-in-out both;
+  -webkit-animation: rotate-center 500ms ease-in-out both;
+          animation: rotate-center 500ms ease-in-out both;
 }
 
 .nourriture .description {
