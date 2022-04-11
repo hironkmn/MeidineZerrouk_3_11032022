@@ -102,25 +102,25 @@ a {
   }
 }
 
-@-webkit-keyframes rotate-90-ccw {
+@-webkit-keyframes rotate-360-ccw {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
-@keyframes rotate-90-ccw {
+@keyframes rotate-360-ccw {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -338,7 +338,7 @@ html, body {
 }
 
 .nourriture:hover .fa-check-circle {
-  animation: rotate-90-ccw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+  animation: rotate-360-ccw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
 }
 
 .nourriture .description {

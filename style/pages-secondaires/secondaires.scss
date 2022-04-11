@@ -126,7 +126,7 @@ html,body
             border-bottom-right-radius: 15px;
         }
         .fa-check-circle{
-            animation: rotate-90-ccw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+            animation: rotate-360-ccw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
         }
     }
     .description{
