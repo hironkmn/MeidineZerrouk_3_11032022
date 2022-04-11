@@ -102,25 +102,25 @@ a {
   }
 }
 
-@-webkit-keyframes rotate-360-ccw {
+@-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes rotate-360-ccw {
+@keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -133,17 +133,6 @@ a {
 @keyframes slidebg {
   to {
     background-position: 20vw;
-  }
-}
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 
@@ -338,7 +327,8 @@ html, body {
 }
 
 .nourriture:hover .fa-check-circle {
-  animation: rotate-360-ccw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+  -webkit-animation: rotate-center 1s ease-in-out both;
+          animation: rotate-center 1s ease-in-out both;
 }
 
 .nourriture .description {
