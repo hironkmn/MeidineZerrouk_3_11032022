@@ -76,24 +76,6 @@ a {
   color: white;
 }
 
-@-webkit-keyframes check-meal {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 70px;
-  }
-}
-
-@keyframes check-meal {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 70px;
-  }
-}
-
 @-webkit-keyframes slide-bottom {
   0% {
     -webkit-transform: translateY(0);
@@ -380,8 +362,6 @@ html, body {
 }
 
 .nourriture .check {
-  -webkit-animation: check-meal-reverse 1s ease-in-out;
-          animation: check-meal-reverse 1s ease-in-out;
   background-color: #99E2D0;
   height: 100%;
   width: 0px;
